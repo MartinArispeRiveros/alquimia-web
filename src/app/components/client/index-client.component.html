@@ -35,7 +35,7 @@
             <td>{{client.birthdate}}</td>
             <td>{{client.visit_count}}</td>
             <td>
-                <a (click)="AddVisit(client)" title="Visita"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                <a (click)="addClientVisit(client)" title="Visita"><i class="fa fa-plus" aria-hidden="true"></i></a>
                 <a [routerLink] = "['/edit-client', client.client_id]" title="Editar" >
                 <i class="fa fa-pencil" aria-hidden="true"></i></a>
                 <a (click)="disableClient(client)" title="Eliminar"><i class="fa fa-trash" aria-hidden="true"></i></a>

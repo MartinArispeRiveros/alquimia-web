@@ -28,13 +28,16 @@ export class IndexClientComponent implements OnInit {
 		});
 	}
 
-	disableClient(client: any){
-		// this.eventService.updateEvent(eventEdited).subscribe(data => {
-		// 	if(data) {
-		// 		this.fashMessage.show('Se ha eliminado con exito el evento!', {cssClass: 'alert-success', timeout: 2000})
-		// 	}else{
-		// 		this.fashMessage.show('No se pudo eliminar el evento!', {cssClass: 'alert-danger', timeout: 2000})
-		// 	}
-		// })
+	addClientVisit(client: any){
+		console.log('client');
+		console.log(client);
+		client.visit_count = client.visit_count + 1;
+		this.clientService.updateClient(client).subscribe(data => {
+			if(data) {
+				this.fashMessage.show('Se ha asignado una visita al cliente!', {cssClass: 'alert-success', timeout: 2000})
+			}else{
+				this.fashMessage.show('No se pudo asignar la visita al cliente!', {cssClass: 'alert-danger', timeout: 2000})
+			}
+		})
 	}
 }
