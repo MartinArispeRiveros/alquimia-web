@@ -12,6 +12,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 export class IndexClientComponent implements OnInit {
 	clientList: any;
 	params: any = {client: 1};
+	filter: any;
 	constructor(
 		private clientService: ClientService,
 		private fashMessage: FlashMessagesService,
@@ -29,8 +30,6 @@ export class IndexClientComponent implements OnInit {
 	}
 
 	addClientVisit(client: any){
-		console.log('client');
-		console.log(client);
 		client.visit_count = client.visit_count + 1;
 		this.clientService.updateClient(client).subscribe(data => {
 			if(data) {
