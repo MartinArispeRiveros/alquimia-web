@@ -1,0 +1,52 @@
+$gutter: 2%;
+.column {
+	float: left;
+    &--1 {
+    	width: (1/12)*(100% - $gutter*(12+1));
+        margin-left: $gutter;
+    }
+    &--2 {
+    	width: (2/12)*(100%  - $gutter*(12+1));
+        margin-left: $gutter;
+    }
+    &--3 {
+    	width: (3/12)*(100%  - $gutter*(4));
+        margin-left: $gutter;
+    }
+    &--4 {
+    	width: (4/12)*(100%  - $gutter*(3));
+        margin-left: $gutter;
+    }
+    &--5 {
+    	width: (5/12)*(100%  - $gutter*(2));
+        margin-left: $gutter;
+    }
+    &--6 {
+    	width: (6/12)*(100%  - $gutter*(2));
+        margin-left: $gutter;
+    }
+    &--7 {
+    	width: (7/12)*(100%  - $gutter*(12+1));
+        margin-left: $gutter;
+    }
+    &--8 {
+    	width: (8/12)*(100%  - $gutter*(12+1));
+        margin-left: $gutter;
+    }
+    &--9 {
+    	width: (9/12)*(100%  - $gutter*(12+1));
+        margin-left: $gutter;
+    }
+    &--10 {
+    	width: (10/12)*(100%  - $gutter*(12+1));
+        margin-left: $gutter;
+    }
+    &--11 {
+    	width: (11/12)*(100%  - $gutter*(12+1));
+        margin-left: $gutter;
+    }
+    &--12 {
+    	width: (12/12)*(100%  - $gutter*(1));
+        margin-left: $gutter;
+    }
+}

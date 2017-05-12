@@ -1,0 +1,44 @@
+form {
+    width: 90%;
+    margin-left: 5%;
+    & > input {
+        border-radius: 10px;
+        border-style: solid;
+        border: 1px solid black;
+        // width: 100%;
+        padding: 0.5em;
+        color: black;
+        &[type='checkbox']{
+        	width: auto;
+        }
+        &[type='submit']{
+            width: auto;
+            background: #00C799;
+            color: white;
+            float: right;
+            margin: 1em;
+        }
+
+    }
+    select{
+        background: black;
+        color: white;
+        padding: 0.5em;
+        vertical-align: middle;
+    }
+
+    & > label {
+        display: block;
+        padding: 0.5em 0;
+    }
+
+    textarea {
+        border-radius: 5px;
+        width: 100%;
+        padding: 0.5em;
+        color: black;
+    }
+    .mydp{
+        width: 17em !important;
+    }
+}

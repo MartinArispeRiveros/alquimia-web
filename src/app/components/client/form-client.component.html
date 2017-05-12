@@ -1,0 +1,43 @@
+<h2>Datos del cliente</h2>
+<form (submit)= "submit()" class="clearfix">
+	<fieldset>
+		<div class="column column--6">
+			<label>Numero de credencial</label>
+			<input type="text" placeholder="Nombre" [(ngModel)]="client.code_card" name="code_card" class="form-control">
+
+			<label>Nombre</label>
+			<input type="text" placeholder="Nombre" [(ngModel)]="client.name" name="name" class="form-control">
+		
+			<label>Apellido</label>
+			<input type="text" placeholder="Apellido" [(ngModel)]="client.last_name" name="last_name" class="form-control">
+
+			<label>Correo</label>			
+			<input type="text" placeholder="Correo" [(ngModel)]="client.email" name="email" class="form-control">
+			
+			<label>Empresa</label>
+			<input type="text" placeholder="Empresa" [(ngModel)]="client.company" name="company" class="form-control">
+			
+			<label>Fecha de nacimiento</label>
+			<datetime [(ngModel)]="client.birthdate" [timepicker]="false" name="birthdate"></datetime>
+		</div>
+		<div class="column column--6">
+		
+			<label>Telefono</label>
+			<input type="text" placeholder="Telefono" [(ngModel)]="client.phone" name="phone" class="form-control">
+
+			<label>Celular</label>
+			<input type="text" placeholder="Celular" [(ngModel)]="client.celphone" name="phone" class="form-control">
+		
+			<label>Direccion</label>
+			<input type="text" placeholder="Direccion" [(ngModel)]="client.address" name="address" class="form-control">
+		
+			<label>Ciudad</label>
+			<input type="text" placeholder="Ciudad" [(ngModel)]="client.city" name="city" class="form-control">
+		
+			<label>Informacion adicional</label>
+			<input type="text" placeholder="Informacion adicional" [(ngModel)]="client.additional_information" name="additional_information" class="form-control">
+		</div>
+
+	</fieldset>
+	<input type="submit" class= "btn btn-primary" value="Guardar">
+</form>

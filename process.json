@@ -1,0 +1,7 @@
+{
+  "apps": [{
+    "name": "actua-web",
+    "args": "dist 8556",
+    "script": "pushstate-server"
+  }]
+}

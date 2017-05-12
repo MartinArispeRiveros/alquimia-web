@@ -1,0 +1,18 @@
+$num-panel: 3;
+$panel-width: 90% / $num-panel; 
+$panel-gutter: (100% - ($panel-width * $num-panel)) / ($num-panel + 1);
+.panel{
+	position: relative;
+	float: left;
+	width: $panel-width;
+	border-radius: 6px;
+	margin: 1em 0 1em $panel-gutter;
+    @media (max-width: 900px) {
+    	width: 40%;
+    	margin: 1em 0 1em 7%; 
+	}
+    @media (max-width: 700px) {
+    	width: 80%;
+    	margin: 1em  10%;
+	}
+}

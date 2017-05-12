@@ -1,0 +1,50 @@
+.ico{
+	height: 1em;
+	width: 1em;
+	cursor: pointer;
+	display: inline-block;
+	&:hover{
+		opacity: 0.8;
+	}
+	&--edit{
+		background: url('assets/icon/rec-36.png');
+		background-size: 100% 100%;
+	}
+	&--delete{
+		background: url('assets/icon/rec-35.png');
+		background-size: 100% 100%;
+	}
+	&--menu{
+		background: url('assets/icon/rec-34.png');
+		background-size: 100% 100%;
+	}
+	&--heart{
+		background: url('assets/icon/rec-18.png');
+		background-size: 100% 100%;
+	}
+	&--mic{
+		background: url('assets/icon/rec-23.png');
+		background-size: 100% 100%;
+	}
+	&--disc{
+		background: url('assets/icon/rec-24.png');
+		background-size: 100% 100%;
+	}
+	&--group{
+		background: url('assets/icon/rec-25.png');
+		background-size: 100% 100%;
+	}
+	&--back{
+		background: url('assets/icon/rec-11.png');
+		background-size: 100% 100%;
+	}
+	&--location{
+		background: url('assets/icon/rec-27.png');
+		background-size: 100% 100%;
+		// &:after{
+		// 	content: url('../icon/rec-27.png');
+		// 	display: inline-block;
+		// 	height: 1em;
+		// }
+	}
+}

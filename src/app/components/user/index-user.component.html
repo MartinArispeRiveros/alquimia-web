@@ -1,0 +1,43 @@
+<div class="container__header">
+    <h2>
+        Lista de Usuarios
+        <a class= "btn btn-primary" [routerLink] = "['/create-user']"><img src="assets/icon/plus.png" alt=""></a>
+    </h2>
+    
+</div>
+
+<div *ngFor="let user of newUsers" class="panel user-panel">
+    <div class="user-panel__header">
+        <a  [routerLink] = "['/edit-user', user.user_id]" href="#" class="ico ico--edit"></a>
+        <a (click)="disableUser(user)" class="ico ico--delete"></a>
+    </div>
+    <img src="assets/icon/user.png" alt="">
+    <h4>{{user.full_name}}</h4>
+    <label for="">Nombre</label>
+    <h4>{{user.user_name}}</h4>
+    <label for="">Usuario</label>
+    <h4>{{user.role}}</h4>
+    <label for="">Rol</label>
+    <h4>{{user.email}}</h4>
+    <label for="">email</label>
+</div>
+
+<!-- <div class="panel panel-default">
+
+   <table class="table">
+        <tr>
+            <th>Nombre</th>
+            <th>usuario</th>
+            <th>Rol</th>
+            <th>Correo</th> 
+            <th>Opciones</th>
+        </tr>
+        <tr>
+            <td>{{user.full_name}}</td>
+            <td>{{user.user_name}}</td>
+            <td>{{user.role}}</td>
+            <td>{{user.email}}</td>
+            <td><a [routerLink] = "['/edit-user', user.user_id]" href="#">Editar</a></td>
+        </tr>
+    </table>
+</div> -->

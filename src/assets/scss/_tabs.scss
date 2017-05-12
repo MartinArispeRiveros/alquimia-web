@@ -1,0 +1,42 @@
+.tabs{
+	list-style-type: none;
+	li{
+		display: inline-block;
+		input[type="radio"]{
+			display: none;
+		}
+		input[type="radio"]:checked + label {
+			border: 4px solid #00C799;
+		}
+		label{
+			display: inline-block;
+			border: 4px solid white;
+			cursor: pointer;
+			width: 6.5em;
+			height: 6.5em;
+			border-radius: 50%;
+			background: white;
+			color: black;
+			text-align: center;
+			line-height: 6.5em;
+			margin-right: 1em;
+			span{
+				position: relative;
+				display: inline-block;
+				width: 100%;
+				vertical-align: middle;
+				&:after{
+					content: "->";
+					position: absolute;
+					color: white;
+					right: -1.2em;
+				}
+			}
+		}
+		&:last-child{
+			span:after{
+				display: none;
+			}
+		}
+	}
+}

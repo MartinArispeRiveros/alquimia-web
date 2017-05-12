@@ -1,0 +1,132 @@
+.navbar {
+    background: #191A22;
+    color: #919596;
+
+    .search-input {
+        input {
+            background: #191A22;
+            border: 2px solid #707277;
+        }
+    }
+
+    &__header {
+        // padding: 1.5em;
+
+        .logo {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            font-size: 2em;
+            vertical-align: middle;
+            margin: 0.3em;
+        }
+
+        .menu {
+            float: right;
+            margin: 0;
+            padding: 0;
+
+            &__item {
+                // float: left;
+                list-style-type: none;
+                display: inline-block;
+
+                a {
+                    text-decoration: none;
+                    display: inline-block;
+                    color: #919596;
+                    padding: 0.5em;
+                }
+
+                &:hover a {
+                    color: #D6BF03;
+                }
+            }
+        }
+
+        & > .menu {
+            margin-top: 0.7em;
+
+            li {
+                &:last-child {
+                    margin-left: 5em;
+                }
+            }
+        }
+
+        .user {
+            position: relative;
+
+            // float: right;
+            // display: inline-block;
+            padding-right: 1em;
+            color: #00C799;
+
+            label {
+                vertical-align: middle;
+                display: inline-block;
+                cursor: pointer;
+            }
+
+            img {
+                vertical-align: middle;
+                height: 2em;
+            }
+
+            input[type=checkbox] {
+                display: none;
+            }
+
+            input[type=checkbox]:checked + .dropdown {
+                display: block;
+            }
+
+            .dropdown {
+                position: absolute;
+                display: none;
+                z-index: 10;
+                width: 10em;
+                background: #1E2126;
+                left: -4em;
+                bottom: -2.5em;
+
+                ul {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    li{
+                        margin: 0;
+                    }
+
+                    a {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &__sub {
+        background: black;
+
+        .search-input {
+            width: 30%;
+            vertical-align: middle;
+            margin: 1.5em;
+
+            input {
+                width: 100%;
+                background: white;
+                color: grey;
+            }
+        }
+
+        select {
+            width: 20%;
+
+            option {
+                background: #191A22;
+            }
+        }
+    }
+}

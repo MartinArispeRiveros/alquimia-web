@@ -1,0 +1,92 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'assets/scss/_normalize';
+@import 'assets/scss/_fonts';
+@import 'assets/scss/_default';
+@import 'assets/scss/_form';
+@import 'assets/scss/_panel';
+@import 'assets/scss/_ico';
+@import 'assets/scss/_datepicker';
+@import 'assets/scss/_column';
+@import 'assets/scss/_image-selector';
+@import 'assets/scss/_month-filter';
+@import 'assets/scss/_tabs';
+
+.container{
+	width: 95%;
+	margin: 0 auto;
+	&__header{
+		h2{
+			vertical-align: middle;
+			font-size: 2em;
+		}
+		img{
+			height: 1em;
+			vertical-align: middle;
+		}
+	}
+	table{
+		width: 100%;
+		border-collapse: collapse;
+		text-align: left;
+    	background: #1E2126;
+		thead{
+       		background: #1A1B23;
+			th{
+				padding: 1em;
+				color: #00C799;
+				border-bottom: 1px solid #00C799; 
+			}
+		}
+		tbody{
+			td{
+				padding: 1em;
+				input{
+					width: 100%;
+					border: none;
+					border-bottom: 1px solid white;
+					color: white;
+					background: none;
+				}
+
+			}
+			tr{
+				border-bottom: 1px solid #00C799;
+				&:last-child{
+					border-bottom: none;
+				}
+			}
+		}
+	}
+
+}
+
+
+.landing{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	div{
+		position: absolute;
+		top: 50%;
+  		transform: translateY(-50%);
+		padding: 1em;
+		width: 100%;
+		text-align: center;
+		// margin-left: 20%;
+		z-index: 2;
+
+		& > img{
+			height: 5em;
+		}
+	}
+}
+
+
+.datepicker{
+	color: black;
+}
+
+.bootstrap-timepicker-widget.open{
+	color: black;
+}
+

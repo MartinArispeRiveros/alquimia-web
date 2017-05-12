@@ -1,0 +1,24 @@
+<nav class="navbar clearfix">
+    <div class="navbar__header clearfix">
+      <a class="logo" href="#">Alquimia</a>
+       <ul class="menu clearfix">
+        <li *ngIf="is_logged == true" class="menu__item" [routerLinkActive] = "['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink] = "['/index-client']">Clientes</a></li>
+        <li *ngIf="is_logged == true" class="menu__item" [routerLinkActive] = "['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink] = "['/index-user']">Usuarios</a></li>
+        <li class="menu__item">
+             <div class="user">
+                <label for="openDropdown">
+                    <span *ngIf="is_logged == true" class="user__name">{{user.user_name}}</span>
+                    <img src="assets/icon/user.png" alt="">
+                </label>
+                <input type="checkbox" id="openDropdown">
+                <div class="dropdown">
+                    <ul>
+                        <li *ngIf="is_logged == false" class="menu__item" [routerLinkActive] = "['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink] = "['/login']">Iniciar sesion</a></li>
+                        <li *ngIf="is_logged == true" class="menu__item" [routerLinkActive] = "['active']"><a (click)="onLogOutClick()">Cerrar sesion</a></li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+      </ul>
+    </div>
+</nav>
