@@ -1,7 +1,7 @@
 export class Client  {
 	client_id: number;
 	name: string;
-	code_card: number;
+	code_card: string;
 	last_name: string;	
 	celphone: string;
 	phone: string;
