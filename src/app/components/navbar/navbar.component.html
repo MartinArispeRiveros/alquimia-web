@@ -1,6 +1,6 @@
 <nav class="navbar clearfix">
     <div class="navbar__header clearfix">
-      <a class="logo" href="#">Alquimia</a>
+      <img heith="400" width="100" class="logo" src="assets/img/logo.png" alt="">
        <ul class="menu clearfix">
         <li *ngIf="is_logged == true" class="menu__item" [routerLinkActive] = "['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink] = "['/index-client']">Clientes</a></li>
         <li *ngIf="is_logged == true" class="menu__item" [routerLinkActive] = "['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink] = "['/index-user']">Usuarios</a></li>
@@ -8,7 +8,7 @@
              <div class="user">
                 <label for="openDropdown">
                     <span *ngIf="is_logged == true" class="user__name">{{user.user_name}}</span>
-                    <img src="assets/icon/user.png" alt="">
+                    <i class="fa fa-user" aria-hidden="true"></i>
                 </label>
                 <input type="checkbox" id="openDropdown">
                 <div class="dropdown">

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers, Response, RequestOptions } from '@angular/http';
+import { Http, Headers, Response, RequestOptions, URLSearchParams } from '@angular/http';
 import { Config } from '../services/config.service';
 import 'rxjs/add/operator/map';
 
@@ -19,13 +19,15 @@ export class ClientService {
 			.map(res => res.json());
 	}
 
-	getAllClients(){
+	getAllClients(newParams){
 		return new Promise((resolve, reject)=>{
 			let headers = new Headers();
+			let params = new URLSearchParams();
+			params.set('code_card', newParams.code_card);
 			this.loadToken();
 			headers.append('token', this.authToken);
 			headers.append('content-type', 'application/json');
-			this.http.get(this.appUrl + '/client', {headers: headers})
+			this.http.get(this.appUrl + '/client', {headers: headers, search: params})
 			.map(res => res.json())
 			.subscribe(data => {
 				resolve(data);

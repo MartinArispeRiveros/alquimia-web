@@ -11,8 +11,9 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 
 export class IndexClientComponent implements OnInit {
 	clientList: any;
-	params: any = {client: 1};
+	// params: any = {client: 1};
 	filter: any;
+	params: any = {};
 	constructor(
 		private clientService: ClientService,
 		private fashMessage: FlashMessagesService,
@@ -20,7 +21,7 @@ export class IndexClientComponent implements OnInit {
 		private router: Router) { }
 	
 	ngOnInit(){
-		this.clientService.getAllClients().then((clients) => {			
+		this.clientService.getAllClients(this.params).then((clients) => {
 			this.clientList = clients;
 		},
 		err => {
@@ -38,5 +39,10 @@ export class IndexClientComponent implements OnInit {
 				this.fashMessage.show('No se pudo asignar la visita al cliente!', {cssClass: 'alert-danger', timeout: 2000})
 			}
 		})
+	}
+
+	filterObserver(event){
+		this.params.code_card = this.filter;
+		this.ngOnInit();
 	}
 }
